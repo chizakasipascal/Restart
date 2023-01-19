@@ -14,6 +14,10 @@
 		502CA5332975E1C700D012F5 /* RestartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA5322975E1C700D012F5 /* RestartTests.swift */; };
 		502CA53D2975E1C700D012F5 /* RestartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA53C2975E1C700D012F5 /* RestartUITests.swift */; };
 		502CA53F2975E1C700D012F5 /* RestartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA53E2975E1C700D012F5 /* RestartUITestsLaunchTests.swift */; };
+		502CA54D2975E60700D012F5 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 502CA54B2975E60700D012F5 /* chimeup.mp3 */; };
+		502CA54E2975E60700D012F5 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 502CA54C2975E60700D012F5 /* success.m4a */; };
+		502CA5552975EC9500D012F5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA5542975EC9500D012F5 /* OnboardingView.swift */; };
+		502CA5572975ECBB00D012F5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA5562975ECBB00D012F5 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		502CA51E2975E1C400D012F5 /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502CA5212975E1C400D012F5 /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
-		502CA5232975E1C400D012F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		502CA5232975E1C400D012F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		502CA5252975E1C600D012F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502CA5282975E1C600D012F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		502CA52E2975E1C700D012F5 /* RestartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,11 @@
 		502CA5382975E1C700D012F5 /* RestartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		502CA53C2975E1C700D012F5 /* RestartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartUITests.swift; sourceTree = "<group>"; };
 		502CA53E2975E1C700D012F5 /* RestartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		502CA54B2975E60700D012F5 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
+		502CA54C2975E60700D012F5 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
+		502CA5532975EBAB00D012F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		502CA5542975EC9500D012F5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		502CA5562975ECBB00D012F5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +103,12 @@
 		502CA5202975E1C400D012F5 /* Restart */ = {
 			isa = PBXGroup;
 			children = (
+				502CA5532975EBAB00D012F5 /* Info.plist */,
+				502CA5522975E89800D012F5 /* Utilities */,
+				502CA5512975E88E00D012F5 /* Views */,
+				502CA54F2975E61F00D012F5 /* Sounds */,
 				502CA5212975E1C400D012F5 /* RestartApp.swift */,
-				502CA5232975E1C400D012F5 /* ContentView.swift */,
+				502CA5502975E88000D012F5 /* Screens */,
 				502CA5252975E1C600D012F5 /* Assets.xcassets */,
 				502CA5272975E1C600D012F5 /* Preview Content */,
 			);
@@ -125,6 +138,39 @@
 				502CA53E2975E1C700D012F5 /* RestartUITestsLaunchTests.swift */,
 			);
 			path = RestartUITests;
+			sourceTree = "<group>";
+		};
+		502CA54F2975E61F00D012F5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				502CA54B2975E60700D012F5 /* chimeup.mp3 */,
+				502CA54C2975E60700D012F5 /* success.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		502CA5502975E88000D012F5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				502CA5232975E1C400D012F5 /* ContentView.swift */,
+				502CA5542975EC9500D012F5 /* OnboardingView.swift */,
+				502CA5562975ECBB00D012F5 /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		502CA5512975E88E00D012F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		502CA5522975E89800D012F5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502CA54E2975E60700D012F5 /* success.m4a in Resources */,
+				502CA54D2975E60700D012F5 /* chimeup.mp3 in Resources */,
 				502CA5292975E1C600D012F5 /* Preview Assets.xcassets in Resources */,
 				502CA5262975E1C600D012F5 /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502CA5552975EC9500D012F5 /* OnboardingView.swift in Sources */,
+				502CA5572975ECBB00D012F5 /* HomeView.swift in Sources */,
 				502CA5242975E1C400D012F5 /* ContentView.swift in Sources */,
 				502CA5222975E1C400D012F5 /* RestartApp.swift in Sources */,
 			);
@@ -420,11 +470,12 @@
 				DEVELOPMENT_TEAM = BZ5GW9JZ7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Restart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +500,12 @@
 				DEVELOPMENT_TEAM = BZ5GW9JZ7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Restart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
