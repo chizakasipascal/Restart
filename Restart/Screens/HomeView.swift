@@ -12,7 +12,7 @@ struct HomeView: View {
     @AppStorage("onboarding") var isOnboardingViewActive:Bool = true
     var body: some View {
         VStack(){
-            //MARK -> HEAD
+            //MARK: -> HEAD
             Spacer()
             ZStack{
                 CirculerGrouperView(ShapeColor: .gray, ShapeOpacity: 0.1)
@@ -28,7 +28,7 @@ struct HomeView: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .padding()
-            //MARK -> FOOTER
+            //MARK: -> FOOTER
           
                 Spacer()
             Button(action:{

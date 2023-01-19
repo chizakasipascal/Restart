@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    //MARK :-> PROPERTY
+    //MARK: -> PROPERTY
     @AppStorage("onboarding") var isOnboardingViewActive:Bool = true
-    //MARK :-> BODY
+    
+    @State private var buttonWith:Double=UIScreen.main.bounds.width-80
+    @State private var buttonOffset:CGFloat=0
+    @State private var isAnimating:Bool=false
+    //MARK: -> BODY
     var body: some View {
         ZStack{
             
@@ -35,17 +39,21 @@ struct OnboardingView: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal,10)
-                }
+                }//: HEADER
+                .opacity (isAnimating ? 1 : 0) .offset (y: isAnimating ? 0 : -40)
+                .animation (.easeOut (duration: 1), value: isAnimating)
               
-                //MARK >CENTER
+                //MARK: ->CENTER
                 ZStack(){
                     CirculerGrouperView(ShapeColor: .white, ShapeOpacity: 0.2)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
+                        .opacity(isAnimating ?1:0)
+                        .animation(.easeIn(duration: 0.5), value: isAnimating)
                 }
                
-                  //MARK >FOOTER
+                  //MARK: ->FOOTER
                 ZStack{
                     // PARTS OF CUSTOMER BUTTOM
                     
@@ -82,18 +90,44 @@ struct OnboardingView: View {
                             
                         }.foregroundColor(.white)
                             .frame(width: 80,height: 80,alignment: .center)
-                            .onTapGesture {
-                                isOnboardingViewActive=false
-                            }
+                            .offset(x:buttonOffset)
+                            .gesture(
+                                DragGesture()
+                                    .onChanged{ gesture in
+                                        if gesture.translation.width > 0 && buttonOffset <= buttonOffset-80{
+                                            buttonOffset = gesture.translation.width
+                                        }
+                                    }
+                                    .onEnded{  _ in
+                                        withAnimation(Animation.easeOut(duration: 0.4)){
+                                            if buttonOffset > buttonOffset / 2 {
+                                                buttonOffset=buttonOffset - 80
+                                                isOnboardingViewActive = false
+                                            }else{
+                                                buttonOffset=0
+                                            }
+                                        }
+                                    }//Gesture
+                            )
+//                            .onTapGesture {
+//                                isOnboardingViewActive=false
+//                            }
                         Spacer()
                     }
                     
                   
-                } .frame(height: 80,alignment: .center)
+                }
+                    .frame(height: 80,alignment: .center)
                     .padding()
+                    .opacity(isAnimating ?1:0)
+                    .offset(y:isAnimating ?0:40)
+                    .animation(.easeIn(duration: 1), value: isAnimating)
             }//VStack
             
         }  //ZStack
+        .onAppear(perform: {
+            isAnimating = true
+        })
        
     }
 }
