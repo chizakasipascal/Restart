@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500F1D9029795C7600DDFF85 /* CirculerGrouperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F1D8F29795C7600DDFF85 /* CirculerGrouperView.swift */; };
 		502CA5222975E1C400D012F5 /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA5212975E1C400D012F5 /* RestartApp.swift */; };
 		502CA5242975E1C400D012F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502CA5232975E1C400D012F5 /* ContentView.swift */; };
 		502CA5262975E1C600D012F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502CA5252975E1C600D012F5 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500F1D8F29795C7600DDFF85 /* CirculerGrouperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirculerGrouperView.swift; sourceTree = "<group>"; };
 		502CA51E2975E1C400D012F5 /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502CA5212975E1C400D012F5 /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		502CA5232975E1C400D012F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
@@ -145,6 +147,7 @@
 			children = (
 				502CA54B2975E60700D012F5 /* chimeup.mp3 */,
 				502CA54C2975E60700D012F5 /* success.m4a */,
+				500F1D8F29795C7600DDFF85 /* CirculerGrouperView.swift */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F1D9029795C7600DDFF85 /* CirculerGrouperView.swift in Sources */,
 				502CA5552975EC9500D012F5 /* OnboardingView.swift in Sources */,
 				502CA5572975ECBB00D012F5 /* HomeView.swift in Sources */,
 				502CA5242975E1C400D012F5 /* ContentView.swift in Sources */,
