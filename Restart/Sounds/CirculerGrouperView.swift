@@ -34,9 +34,9 @@ struct CirculerGrouperView: View {
 struct CirculerGrouperView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
-            Color("ColorBlue")
-                .ignoresSafeArea(.all,edges: .all)
-            CirculerGrouperView(ShapeColor: .white, ShapeOpacity: 0.2)
+//            Color("ColorBlue")
+//                .ignoresSafeArea(.all,edges: .all)
+            CirculerGrouperView(ShapeColor:  Color("ColorBlue"), ShapeOpacity: 0.2)
         }
        
     }
