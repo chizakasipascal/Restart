@@ -17,6 +17,7 @@ struct OnboardingView: View {
     @State private var imageOffset:CGSize = .zero
     @State private var indicatorOpacity:Double = 1.0
     @State private var textTitle:String = "Share."
+    let hapticFeedback = UINotificationFeedbackGenerator ()
     //MARK: -> BODY
     var body: some View {
         ZStack{
@@ -30,7 +31,7 @@ struct OnboardingView: View {
                 VStack(spacing:0){
                     Text(textTitle)
                         .fontWeight(.heavy)
-                        .foregroundColor(.black)
+//                        .foregroundColor(.black)
                         .font(.system(size: 60))
                         .transition(.opacity)
                         .id(textTitle)
@@ -41,7 +42,7 @@ struct OnboardingView: View {
                          """)
                     .font(.title3)
                     .fontWeight(.light)
-                    .foregroundColor(.black)
+//                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal,10)
                 }//: HEADER
@@ -131,7 +132,8 @@ struct OnboardingView: View {
                             Image(systemName: "chevron.right.2")
                                 .font(.system(size: 24,weight: .bold))
                             
-                        }.foregroundColor(.white)
+                        }
+                            .foregroundColor(.white)
                             .frame(width: 80,height: 80,alignment: .center)
                             .offset(x:buttonOffset)
                             .gesture(
@@ -144,9 +146,12 @@ struct OnboardingView: View {
                                     .onEnded{  _ in
                                         withAnimation(Animation.easeOut(duration: 0.4)){
                                             if buttonOffset > buttonWith / 2 {
-                                                buttonOffset=buttonWith - 80
+                                                buttonOffset = buttonWith - 80
+                                                hapticFeedback.notificationOccurred(.success)
+                                                playSound(sound: "chimeup", type: "mp3")
                                                 isOnboardingViewActive = false
                                             }else{
+                                                hapticFeedback.notificationOccurred(.warning)
                                                 buttonOffset=0
                                             }
                                         }
@@ -167,6 +172,8 @@ struct OnboardingView: View {
         .onAppear(perform: {
             isAnimating = true
         })
+        // Dark mode
+//        .preferredColorScheme(.dark)
     }
 }
 
